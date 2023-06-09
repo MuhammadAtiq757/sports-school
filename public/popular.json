@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "className": "Class A",
+    "instructorName": "John Doe",
+    "instructorEmail": "john.doe@example.com",
+    "availableSeats": 20,
+    "price": 50,
+    "status": "pending",
+    "img":"https://i.ibb.co/F5HHN7T/360-F-129574257-d-Rat-FS0-Qow-ZBK3bx-CA1dq-G7-ZQe-Hv-YSV2.jpg"
+    
+  },
+  {
+    "id": 2,
+    "className": "Class B",
+    "instructorName": "Jane Smith",
+    "instructorEmail": "jane.smith@example.com",
+    "availableSeats": 15,
+    "price": 60,
+    "status": "approved",
+    "img":"https://i.ibb.co/BcL1gKp/waiting-student-young-sports-ins.jpg"
+
+  },
+  {
+    "id": 3,
+    "className": "Class C",
+    "instructorName": "David Johnson",
+    "instructorEmail": "david.johnson@example.com",
+    "availableSeats": 10,
+    "price": 70,
+    "status": "denied",
+    "img":"https://i.ibb.co/gm7sWzq/2470082-proud-fitness-coach-in-h.jpg"
+  },
+  {
+    "id": 4,
+    "className": "Class D",
+    "instructorName": "Sarah Anderson",
+    "instructorEmail": "sarah.anderson@example.com",
+    "availableSeats": 25,
+    "price": 80,
+    "status": "pending",
+    "img":"hhttps://i.ibb.co/7Y9jspg/male-athlete-standing-arms-cross.jpg"
+  },
+  {
+    "id": 5,
+    "className": "Class E",
+    "instructorName": "Michael Williams",
+    "instructorEmail": "michael.williams@example.com",
+    "availableSeats": 18,
+    "price": 90,
+    "status": "approved",
+    "img":"https://i.ibb.co/q5HMRNV/sports-gym-activities-189498-657.jpg"
+  },
+  {
+    "id": 6,
+    "className": "Class F",
+    "instructorName": "Emily Brown",
+    "instructorEmail": "emily.brown@example.com",
+    "availableSeats": 12,
+    "price": 100,
+    "status": "denied",
+    "img":"https://i.ibb.co/7xhK1LG/personal-trainer-takes-notes-cli.jpg"
+  },
+  {
+    "id": 7,
+    "className": "Class G",
+    "instructorName": "Daniel Wilson",
+    "instructorEmail": "daniel.wilson@example.com",
+    "availableSeats": 22,
+    "price": 110,
+    "status": "pending",
+    "img":"https://i.ibb.co/F5HHN7T/360-F-129574257-d-Rat-FS0-Qow-ZBK3bx-CA1dq-G7-ZQe-Hv-YSV2.jpg"
+  },
+  {
+    "id": 8,
+    "className": "Class H",
+    "instructorName": "Olivia Taylor",
+    "instructorEmail": "olivia.taylor@example.com",
+    "availableSeats": 16,
+    "price": 120,
+    "status": "approved",
+    "img":"https://i.ibb.co/F5HHN7T/360-F-129574257-d-Rat-FS0-Qow-ZBK3bx-CA1dq-G7-ZQe-Hv-YSV2.jpg"
+  },
+  {
+    "id": 9,
+    "className": "Class I",
+    "instructorName": "Matthew Davis",
+    "instructorEmail": "matthew.davis@example.com",
+    "availableSeats": 14,
+    "price": 130,
+    "status": "denied",
+    "img":"https://i.ibb.co/F5HHN7T/360-F-129574257-d-Rat-FS0-Qow-ZBK3bx-CA1dq-G7-ZQe-Hv-YSV2.jpg"
+  },
+  {
+    "id": 10,
+    "className": "Class J",
+    "instructorName": "Sophia Martinez",
+    "instructorEmail": "sophia.martinez@example.com",
+    "availableSeats": 30,
+    "price": 140,
+    "status": "pending",
+    "img":"https://i.ibb.co/F5HHN7T/360-F-129574257-d-Rat-FS0-Qow-ZBK3bx-CA1dq-G7-ZQe-Hv-YSV2.jpg"
+  }
+]

@@ -1,0 +1,17 @@
+.extra{
+    background: linear-gradient(to bottom, #7ec3d8, #9e9d69);
+}
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
