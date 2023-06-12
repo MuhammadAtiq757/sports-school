@@ -7,11 +7,11 @@ import Banner from "./Banner/Banner";
 const Home = () => {
     return (
         <div>
-           <Banner></Banner> 
+           {/* <Banner></Banner> 
            <PopularClases>
            </PopularClases>
            <PopularInstructor></PopularInstructor>
-           <AboutSport></AboutSport>
+           <AboutSport></AboutSport> */}
         </div>
     );
 };
