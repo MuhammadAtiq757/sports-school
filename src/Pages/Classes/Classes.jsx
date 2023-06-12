@@ -9,7 +9,7 @@ const Classes = () => {
   useEffect(() => {
 
     const fetchData = () => {
-      fetch('http://localhost:5000/popular')
+      fetch('http://localhost:5000/popular/role')
         .then(response => response.json())
         .then(jsonData => setData(jsonData))
         .catch(error => {
