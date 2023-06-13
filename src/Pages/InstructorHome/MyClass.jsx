@@ -1,56 +1,56 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../providers/AuthProvider';
-import MyClasses from './MyClasses';
+// import React, { useContext, useEffect, useState } from 'react';
+// import { AuthContext } from '../../providers/AuthProvider';
+// import MyClasses from './MyClasses';
 
-const MyClass = () => {
-    const {user} = useContext(AuthContext);
-    const [myclass, setMyclass] = useState([])
-    console.log(user)
-   const url = `http://localhost:5000/myclass?email=${user?.email}`;
+// const MyClass = () => {
+//     const {user} = useContext(AuthContext);
+//     const [myclass, setMyclass] = useState([])
+//     console.log(user)
+//    const url = `http://localhost:5000/myclass?email=${user?.email}`;
     
-   useEffect(() =>{
-    fetch(url)
-    .then(res => res.json())
-    .then(data => setMyclass(data))
- }, [url])
+//    useEffect(() =>{
+//     fetch(url)
+//     .then(res => res.json())
+//     .then(data => setMyclass(data))
+//  }, [url])
 
 
- console.log(myclass);
-    return (
-        <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
+//  console.log(myclass);
+//     return (
+//         <div className="overflow-x-auto">
+//         <table className="table">
+//           {/* head */}
+//           <thead>
+//             <tr>
            
-              {/* Class Image, Class name, Instructor name, Instructor email, Available seats, Price, Status(pending/approved/denied) 3 buttons( Approve, Deny and send feedback). */}
+          
       
-              <th>Class Image</th>
-              <th>Class name</th>
-              <th>Instructor name</th>
-              <th>Available seats</th>
-              <th>Price</th>
+//               <th>Class Image</th>
+//               <th>Class name</th>
+//               <th>Instructor name</th>
+//               <th>Available seats</th>
+//               <th>Price</th>
              
               
-            </tr>
-          </thead>
-          <tbody>
+//             </tr>
+//           </thead>
+//           <tbody>
      
-        {myclass.map((classItem) => <MyClasses 
-        key={classItem._id}
-        classItem ={classItem}
-        >
-        </MyClasses>
+//         {myclass.map((classItem) => <MyClasses 
+//         key={classItem._id}
+//         classItem ={classItem}
+//         >
+//         </MyClasses>
        
 
-        )}
-      </tbody>
+//         )}
+//       </tbody>
       
       
           
-        </table>
-      </div>
-    );
-};
+//         </table>
+//       </div>
+//     );
+// };
 
-export default MyClass;
+// export default MyClass;
