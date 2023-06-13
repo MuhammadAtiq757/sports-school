@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../../providers/AuthProvider';
+
 import './AddClasses.css'
+import { AuthContext } from '../../Providers/AuthProvider';
+
 
 const AddClasses = () => {
-    const {user} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext)
+    console.log(user);
     const handleBookService = event =>{
         event.preventDefault();
         const form = event.target;
@@ -72,13 +75,13 @@ console.log(data);
         <label className="label">
             <span className="label-text">Instructor Name</span>
         </label>
-        <input type="text"  name="instructorName" className="input input-bordered" />
+        <input defaultValue={user.displayName} readOnly type="text"  name="instructorName" className="input input-bordered" />
     </div>
     <div className="form-control">
         <label className="label">
             <span className="label-text">Instructor Email</span>
         </label>
-        <input type="email" defaultValue={user?.email} name="email" className="input input-bordered" />
+        <input type="email" defaultValue={user?.email} readOnly  name="email" className="input input-bordered" />
     </div>
     <div className="form-control">
         <label className="label">

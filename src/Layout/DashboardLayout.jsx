@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaColumns, FaHome } from 'react-icons/fa';
+import { FaBookReader, FaHome, FaBookOpen, FaAddressBook, FaColumns,FaUserFriends  } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 import AdminHook from '../Pages/Hooks/AdminHook';
 import Instructor from '../Pages/Instructors/Instructor';
 import InstructorHook from '../Pages/Hooks/InstructorHook';
+
 // import { IconName } from "react-icons/fc";
 
 const DashboardLayout = () => {
@@ -32,19 +33,23 @@ const [isInstructor] = InstructorHook()
             isAdmin ?( <>
                 <li> <Link> <FaHome></FaHome> Admin Home </Link> </li>
               <li> <Link to="/dashboardlayout/allclasses"> <FaColumns></FaColumns> Manage Classes </Link> </li>
-              <li><Link to='/dashboardlayout/allusers'> <FaColumns></FaColumns> Manage Users</Link></li>
+              <li><Link to='/dashboardlayout/allusers'> <FaUserFriends></FaUserFriends>  Manage Users</Link></li>
             </>
             ) : isInstructor ? (
             <>
               <li>
-                <Link to='/dashboardlayout/addclasses'> Add Classes</Link>
-                <Link to='/dashboardlayout/myclass'> My Classes</Link>
+              <li> <Link> <FaHome></FaHome> Instructor Home </Link> </li>
+
+                <Link to='/dashboardlayout/addclasses'> <FaAddressBook></FaAddressBook> Add Classes</Link>
+                <Link to='/dashboardlayout/myclass'> <FaBookReader></FaBookReader> My Classes</Link>
               </li>
             </>
             ) : (
               <>
-              <li><Link> Enrolled Classes </Link> </li>
-              <li><Link to='/dashboardlayout/selectedClass'> Selected Classes </Link> </li>
+                <li> <Link> <FaHome></FaHome> Student Home </Link> </li>
+
+              <li><Link><FaBookOpen></FaBookOpen> Enrolled Classes </Link> </li>
+              <li><Link to='/dashboardlayout/selectedClass'><FaBookReader></FaBookReader> Selected Classes </Link> </li>
               
               </>
             )
