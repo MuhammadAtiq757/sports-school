@@ -30,20 +30,21 @@ const AdminClass = ({ classItem }) => {
       <td>{classItem.availableSeats}</td>
       <td>{classItem.price}</td>
       <td>
-        <button>
+        {/* <button>
           {classItem.status == 'approved' ? 'approved' :
             classItem.status == 'denied' ? 'denied' :
               'pending'}
-        </button>
+        </button> */}
        
       </td>
-      <td>
+      <td className='flex'>
         {/* <button onClick={() => handleApprove(classItem)} className='btn btn-xs'>Approve</button>
         <button className='btn btn-xs'>Deny</button> */}
         <button onClick={() => handleApprove(classItem)} className= {`btn btn-xs ${modifiedCount === 1 ? 'btn-green' : ''}`}>
   Approve
 </button>
 <button className='btn btn-xs'>Deny</button>
+<button className='btn btn-xs'>Feedback</button>
 
       </td>
     </tr>

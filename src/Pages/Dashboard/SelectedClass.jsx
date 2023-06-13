@@ -1,0 +1,59 @@
+import React, { useEffect, useState } from 'react';
+
+const SelectedClass = () => {
+    const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = () => {
+      fetch('http://localhost:5000/selectedClassData')
+        .then(response => response.json())
+        .then(jsonData => setData(jsonData))
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    };
+
+    fetchData();
+  }, []);
+
+
+    return (
+        <div className="overflow-x-auto">
+  <table className="table table-zebra">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Class Name</th>
+        <th>instructor Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+     {
+        data.map(info => <tr
+        key={data._id}
+        >
+            <td>
+            <img className='w-20' src={info .image}/>
+            </td>
+            <td>{info .name}</td>
+            <td>{info .instructorName}</td>
+            <td className=''>
+               <button className='btn btn-xs btn-error mx-2'>Delete</button> 
+               <button className='btn btn-xs btn-warning mx-2'>Pay</button> 
+
+            </td>
+          </tr>)
+     }
+      
+    
+    
+     
+    </tbody>
+  </table>
+</div>
+    );
+};
+
+export default SelectedClass;

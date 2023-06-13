@@ -41,7 +41,7 @@ const AdminClasses = () => {
         <th>Instructor email</th>
         <th>Available seats</th>
         <th>Price</th>
-        <th>Status</th>
+       
         <th>Action</th>
         
       </tr>

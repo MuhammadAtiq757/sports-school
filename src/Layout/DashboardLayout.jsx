@@ -10,6 +10,7 @@ const DashboardLayout = () => {
   // const isAdmin = true;
   // const isInstructor = false;
 const [isAdmin] = AdminHook()
+console.log(isAdmin)
 const [isInstructor] = InstructorHook()
 
 
@@ -43,7 +44,7 @@ const [isInstructor] = InstructorHook()
             ) : (
               <>
               <li><Link> Enrolled Classes </Link> </li>
-              <li><Link> Selected Classes </Link> </li>
+              <li><Link to='/dashboardlayout/selectedClass'> Selected Classes </Link> </li>
               
               </>
             )

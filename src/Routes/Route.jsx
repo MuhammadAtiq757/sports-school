@@ -19,6 +19,8 @@ import AdminClasses from "../Pages/Dashboard/Admin/AdminClasses";
 import Allusers from "../Pages/Dashboard/Admin/Allusers";
 import AddClasses from "../Pages/InstructorHome/AddClasses";
 import MyClass from "../Pages/InstructorHome/MyClass";
+import SelectedClass from "../Pages/Dashboard/SelectedClass";
+import EnrolledClass from "../Pages/Dashboard/EnrolledClass";
 
 export const router = createBrowserRouter([
     {
@@ -87,6 +89,15 @@ export const router = createBrowserRouter([
            path: 'myclass',
            element: <MyClass></MyClass>
 
+         },
+         {
+           path: 'selectedClass',
+           element:<SelectedClass></SelectedClass>
+
+         },
+         {
+           path: 'enrollClass',
+           element:<EnrolledClass></EnrolledClass>
          }
       ]
    }
