@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome } from 'react-icons/fa';
+import { FaColumns, FaHome } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 import AdminHook from '../Pages/Hooks/AdminHook';
 import Instructor from '../Pages/Instructors/Instructor';
@@ -31,8 +31,8 @@ const [isInstructor] = InstructorHook()
           {
             isAdmin ?( <>
                 <li> <Link> <FaHome></FaHome> Admin Home </Link> </li>
-              <li> <Link to="/dashboardlayout/allclasses">  Manage Classes </Link> </li>
-              <li><Link to='/dashboardlayout/allusers'>  Manage Users</Link></li>
+              <li> <Link to="/dashboardlayout/allclasses"> <FaColumns></FaColumns> Manage Classes </Link> </li>
+              <li><Link to='/dashboardlayout/allusers'> <FaColumns></FaColumns> Manage Users</Link></li>
             </>
             ) : isInstructor ? (
             <>

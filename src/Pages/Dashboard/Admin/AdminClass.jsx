@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useRef, useState } from 'react';
 import axios from 'axios';
-// import './AdminClasses.css'
-const modifiedCount =1 ;
+import Modal from './Modal';
+const modifiedCount = 1;
 
 const AdminClass = ({ classItem }) => {
+  const modalRef = useRef(null); // Create a reference to the modal element
+
+  const handleOpenModal = () => {
+    modalRef.current.showModal(); // Open the modal using ref and showModal() method
+  };
   console.log(classItem);
 
-  const handleApprove = (classItem) => {
+  const [showModal, setShowModal] = useState(false)
 
-    axios.patch(`http://localhost:5000/users/approve/${classItem._id}`)
+  const handleApprove = (classItem) => {
+    axios
+      .patch(`http://localhost:5000/users/approve/${classItem._id}`)
       .then(response => {
         console.log(response.data);
         // Handle the response data as needed
@@ -16,38 +23,44 @@ const AdminClass = ({ classItem }) => {
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  
+  };
 
-  
-};
 
   return (
-    <tr>
-      <td><img src={classItem.image} alt="" /></td>
-      <td>{classItem.name}</td>
-      <td>{classItem.instructorName}</td>
-      <td>{classItem.instructorEmail}</td>
-      <td>{classItem.availableSeats}</td>
-      <td>{classItem.price}</td>
-      <td>
-        {/* <button>
-          {classItem.status == 'approved' ? 'approved' :
-            classItem.status == 'denied' ? 'denied' :
-              'pending'}
-        </button> */}
-       
-      </td>
-      <td className='flex'>
-        {/* <button onClick={() => handleApprove(classItem)} className='btn btn-xs'>Approve</button>
-        <button className='btn btn-xs'>Deny</button> */}
-        <button onClick={() => handleApprove(classItem)} className= {`btn btn-xs ${modifiedCount === 1 ? 'btn-green' : ''}`}>
-  Approve
-</button>
-<button className='btn btn-xs'>Deny</button>
-<button className='btn btn-xs'>Feedback</button>
+    <>
 
-      </td>
-    </tr>
+      <tr>
+        <td><img src={classItem.image} alt="" /></td>
+        <td>{classItem.name}</td>
+        <td>{classItem.instructorName}</td>
+        <td>{classItem.instructorEmail}</td>
+        <td>{classItem.availableSeats}</td>
+        <td>{classItem.price}</td>
+        <td>
+
+        </td>
+        <td>
+
+          <button
+            onClick={() => handleApprove(classItem)}
+            className={`btn btn-xs ${modifiedCount === 1 ? 'btn-green' : ''}`}
+          >
+            Approve
+          </button>
+          <button className='btn btn-xs'>Deny</button>
+         
+            <button onClick={handleOpenModal}  className='btn btn-xs'>Feedback</button>
+        
+        </td>
+      </tr>
+
+      <Modal
+        modalRef={modalRef}
+      ></Modal>
+
+
+
+    </>
   );
 };
 
