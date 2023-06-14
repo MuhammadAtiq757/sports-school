@@ -31,7 +31,7 @@ const AddClasses = () => {
         }
         console.log(adding);
         
-fetch('http://localhost:5000/addclass',{
+fetch('https://school-academy-server-muhammadatiq757.vercel.app/addclass',{
     method: 'POST',
     headers: {
         'content-type': 'application/json'

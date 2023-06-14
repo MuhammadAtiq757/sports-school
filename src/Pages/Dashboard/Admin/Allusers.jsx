@@ -17,7 +17,7 @@ console.log(data);
     useEffect(() => {
   
       const fetchData = () => {
-        fetch('http://localhost:5000/users')
+        fetch('https://school-academy-server-muhammadatiq757.vercel.app/users')
           .then(response => response.json())
           .then(jsonData => setData(jsonData))
           .catch(error => {
@@ -29,7 +29,7 @@ console.log(data);
     }, []);
   
 const handleMakeAdmin = user =>{
-fetch(`http://localhost:5000/users/admin/${user._id}`,{
+fetch(`https://school-academy-server-muhammadatiq757.vercel.app/users/admin/${user._id}`,{
 method: 'PATCH'
 })
 
@@ -48,7 +48,7 @@ method: 'PATCH'
 
 }
 const handleMakeInstructor = user =>{
-fetch(`http://localhost:5000/users/instructor/${user._id}`,{
+fetch(`https://school-academy-server-muhammadatiq757.vercel.app/users/instructor/${user._id}`,{
 method: 'PATCH'
 })
 

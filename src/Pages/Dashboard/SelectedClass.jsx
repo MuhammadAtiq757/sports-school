@@ -5,7 +5,7 @@ const SelectedClass = () => {
     const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = () => {
-      fetch('http://localhost:5000/selectedClassData')
+      fetch('https://school-academy-server-muhammadatiq757.vercel.app/selectedClassData')
         .then(response => response.json())
         .then(jsonData => setData(jsonData))
         .catch(error => {
@@ -18,7 +18,7 @@ const SelectedClass = () => {
 
   const handleDelete = id =>{
 
-    fetch(`http://localhost:5000/deletedata/${id}`,{
+    fetch(`https://school-academy-server-muhammadatiq757.vercel.app/deletedata/${id}`,{
       method: "delete"
   })
   .then(res => res.json())

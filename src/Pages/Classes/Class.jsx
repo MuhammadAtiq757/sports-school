@@ -19,7 +19,7 @@ const Class = ({ da }) => {
     if (user) {
       setIsButtonDisabled(true); // Disable the button when clicked
 
-      fetch('http://localhost:5000/selectedClassData', {
+      fetch('https://school-academy-server-muhammadatiq757.vercel.app/selectedClassData', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

@@ -16,7 +16,7 @@ const AdminClass = ({ classItem }) => {
 
   const handleApprove = (classItem) => {
     axios
-      .patch(`http://localhost:5000/users/approve/${classItem._id}`)
+      .patch(`https://school-academy-server-muhammadatiq757.vercel.app/users/approve/${classItem._id}`)
       .then(response => {
         console.log(response.data);
         window.alert('Approve successfully'); // Show alert message

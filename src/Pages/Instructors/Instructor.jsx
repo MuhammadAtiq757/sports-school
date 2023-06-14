@@ -6,7 +6,7 @@ const Instructor = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch('http://localhost:5000/popular')
+      fetch('https://school-academy-server-muhammadatiq757.vercel.app/popular')
         .then(response => response.json())
         .then(jsonData => setInstructor(jsonData))
         .catch(error => {

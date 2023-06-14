@@ -2,8 +2,9 @@
 import { FaGoogle } from "react-icons/fa";
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+
 import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const SocialLogin = () => {
     const {googleSignIn} = useContext(AuthContext);
@@ -17,7 +18,7 @@ const SocialLogin = () => {
             const saveUser = {name: loggedUser.displayname, email:loggedUser.email}
 
             console.log(loggedUser);
-            fetch('http://localhost:5000/users',{
+            fetch('https://school-academy-server-muhammadatiq757.vercel.app/users',{
                 method: 'POST',
                 headers: {
                     'content-type': "application/json"
