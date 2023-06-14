@@ -1,14 +1,15 @@
 import React, { useRef } from 'react';
 
-const Modal = ({ modalRef}) => {
+const Modal = ({ modalRef }) => {
+  const handleFeedback = (event) => {
+    event.preventDefault();
+    const feedback = event.target.feedback.value;
+    console.log(feedback);
+  };
 
-    const handleFeedback = (event) =>{
-        event.preventDefault()
-     const feedback =  event.target.feedback.value     
-
-     console.log(feedback);
-    }
-
+  const handleCloseModal = () => {
+    modalRef.current.close(); // Close the modal using ref and close() method
+  };
 
   return (
     <>
@@ -22,11 +23,16 @@ const Modal = ({ modalRef}) => {
       {/* Modal */}
       <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle">
         <form onSubmit={handleFeedback} method="dialog" className="modal-box">
-        <textarea className="textarea w-full textarea-accent" placeholder="Write Your Feedback" name='feedback'></textarea>
-          <div className="flex justify-end gap-6">
+          <textarea
+            className="textarea w-full textarea-accent"
+            placeholder="Write Your Feedback"
+            name="feedback"
+          ></textarea>
+          <div className="modal-action">
             {/* if there is a button in the form, it will close the modal */}
-            <input type="submit" value="send" />
-            <button className="btn modal-action">Close</button>
+            <button className="btn" onClick={handleCloseModal}>
+              Send
+            </button>
           </div>
         </form>
       </dialog>

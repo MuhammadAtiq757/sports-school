@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react';
 import axios from 'axios';
 import Modal from './Modal';
+
 const modifiedCount = 1;
 
 const AdminClass = ({ classItem }) => {
@@ -18,6 +19,7 @@ const AdminClass = ({ classItem }) => {
       .patch(`http://localhost:5000/users/approve/${classItem._id}`)
       .then(response => {
         console.log(response.data);
+        window.alert('Approve successfully'); // Show alert message
         // Handle the response data as needed
       })
       .catch(error => {
@@ -40,7 +42,6 @@ const AdminClass = ({ classItem }) => {
 
         </td>
         <td>
-
           <button
             onClick={() => handleApprove(classItem)}
             className={`btn btn-xs ${modifiedCount === 1 ? 'btn-green' : ''}`}
@@ -48,17 +49,13 @@ const AdminClass = ({ classItem }) => {
             Approve
           </button>
           <button className='btn btn-xs'>Deny</button>
-         
-            <button onClick={handleOpenModal}  className='btn btn-xs'>Feedback</button>
-        
+          <button onClick={handleOpenModal} className='btn btn-xs'>Feedback</button>
         </td>
       </tr>
 
       <Modal
         modalRef={modalRef}
       ></Modal>
-
-
 
     </>
   );

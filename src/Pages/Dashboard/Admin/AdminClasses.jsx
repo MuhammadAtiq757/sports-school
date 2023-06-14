@@ -30,7 +30,7 @@ const AdminClasses = () => {
               <th>Instructor Email</th>
               <th>Available Seats</th>
               <th>Price</th>
-              <th>Action</th>
+              <th className='text-center'>Action</th>
             </tr>
           </thead>
           <tbody>

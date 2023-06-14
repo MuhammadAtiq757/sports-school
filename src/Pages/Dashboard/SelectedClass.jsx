@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const SelectedClass = () => {
+  const [meet, setMeet] = useState([])
     const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = () => {
@@ -15,7 +16,21 @@ const SelectedClass = () => {
     fetchData();
   }, []);
 
+  const handleDelete = id =>{
 
+    fetch(`http://localhost:5000/deletedata/${id}`,{
+      method: "delete"
+  })
+  .then(res => res.json())
+  .then(data =>{
+      console.log(data);
+      if(data.deletedCount > 0){
+          alert('Deleted Successful');
+          // const remaining = mytoy.filter(toy => toy._id !==id);
+          // setMytoy(remaining)
+      }
+  })
+  }
     return (
         <div className="overflow-x-auto">
   <table className="table table-zebra">
@@ -40,16 +55,12 @@ const SelectedClass = () => {
             <td>{info .name}</td>
             <td>{info .instructorName}</td>
             <td className=''>
-               <button className='btn btn-xs btn-error mx-2'>Delete</button> 
+               <button onClick={()=>handleDelete(info._id)} className='btn btn-xs btn-error mx-2'>Delete</button> 
                <button className='btn btn-xs btn-warning mx-2'>Pay</button> 
 
             </td>
           </tr>)
      }
-      
-    
-    
-     
     </tbody>
   </table>
 </div>

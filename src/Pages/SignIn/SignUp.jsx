@@ -7,8 +7,7 @@ import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../../providers/AuthProvider";
 
-// import signupimg from '../../assets/others/authentication.gif'
-// import SocialLogin from "../../Shraed/SocialLogin/SocialLogin";
+
 
 const SignUp = () => {
 

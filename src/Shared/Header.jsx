@@ -64,7 +64,7 @@ const handleDarkMode =(event)=>{
     </>
     return (
         <>
-            <div className=" bg-opacity-30 h-20 text-black max-w-screen-xl navbar bg-base-100">
+            <div className=" bg-opacity-20 bg-slate-100 h-20 text-black max-w-screen-xl navbar text-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
