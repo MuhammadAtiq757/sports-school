@@ -8,3 +8,4 @@
 * 8. when you log in as a admin you will see admin dashboard. you can do any user will be admin or instructor.
 * 9. as a user you approve any class.
 * 10. as a user you can send a feedback on class.
+* live linK : https://sports-academy-4ceb3.web.app/
